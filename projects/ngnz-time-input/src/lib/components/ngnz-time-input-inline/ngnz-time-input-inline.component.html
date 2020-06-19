@@ -1,0 +1,103 @@
+<div class="ngnz-time-group" [formGroup]="parts">
+    &nbsp;
+    <div class="ngnz-hours-block">
+        <button
+            *ngIf="showButtons || (!noButtons && focused)"
+            class="ngnz-button"
+            [ngClass]="buttonDecreaseClassesConf"
+            (click)="btnDecrease($event, 'hours')"
+        >
+            <mat-icon class="ngnz-square-1em">{{
+                decreaseBtnIconName
+            }}</mat-icon>
+        </button>
+        <input
+            #hours
+            class="ngnz-hours ngnz-width-2em"
+            formControlName="hours"
+            readonly
+            [matTooltip]="focused ? 'используйте колесо прокрутки' : ''"
+            [ngClass]="inputClassesConf"
+            (wheel)="wheel($event, 'hours')"
+        />
+        <button
+            *ngIf="showButtons || (!noButtons && focused)"
+            class="ngnz-button"
+            [ngClass]="buttonIncreaseClassesConf"
+            (click)="btnIncrease($event, 'hours')"
+        >
+            <mat-icon class="ngnz-square-1em">{{
+                increaseBtnIconName
+            }}</mat-icon>
+        </button>
+    </div>
+
+    <div class="ngnz-splitter">{{ splitter }}</div>
+
+    <div class="ngnz-minutes-block">
+        <button
+            *ngIf="showButtons || (!noButtons && focused)"
+            class="ngnz-button"
+            [ngClass]="buttonDecreaseClassesConf"
+            (click)="btnDecrease($event, 'minutes')"
+        >
+            <mat-icon class="ngnz-square-1em">{{
+                decreaseBtnIconName
+            }}</mat-icon>
+        </button>
+        <input
+            #minutes
+            class="ngnz-minutes ngnz-width-2em"
+            formControlName="minutes"
+            readonly
+            [matTooltip]="focused ? 'используйте колесо прокрутки' : ''"
+            [ngClass]="inputClassesConf"
+            (wheel)="wheel($event, 'minutes')"
+        />
+        <button
+            *ngIf="showButtons || (!noButtons && focused)"
+            class="ngnz-button"
+            [ngClass]="buttonIncreaseClassesConf"
+            (click)="btnIncrease($event, 'minutes')"
+        >
+            <mat-icon class="ngnz-square-1em">{{
+                increaseBtnIconName
+            }}</mat-icon>
+        </button>
+    </div>
+
+    <div class="ngnz-splitter" *ngIf="!noSeconds">{{ splitter }}</div>
+
+    <div class="ngnz-seconds-block" *ngIf="!noSeconds">
+        <button
+            *ngIf="showButtons || (!noButtons && focused)"
+            class="ngnz-button"
+            [ngClass]="buttonDecreaseClassesConf"
+            (click)="btnDecrease($event, 'seconds')"
+        >
+            <mat-icon class="ngnz-square-1em">{{
+                decreaseBtnIconName
+            }}</mat-icon>
+        </button>
+        <input
+            #seconds
+            class="ngnz-seconds ngnz-width-2em"
+            formControlName="seconds"
+            readonly
+            [matTooltip]="focused ? 'используйте колесо прокрутки' : ''"
+            [ngClass]="inputClassesConf"
+            (wheel)="wheel($event, 'seconds')"
+        />
+        <button
+            *ngIf="showButtons || (!noButtons && focused)"
+            class="ngnz-button"
+            [ngClass]="buttonIncreaseClassesConf"
+            (click)="btnIncrease($event, 'seconds')"
+        >
+            <mat-icon class="ngnz-square-1em">{{
+                increaseBtnIconName
+            }}</mat-icon>
+        </button>
+    </div>
+    &nbsp;
+</div>

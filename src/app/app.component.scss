@@ -1,0 +1,23 @@
+button {
+    color: olive;
+}
+
+::ng-deep .assClass {
+    background: goldenrod;
+}
+
+::ng-deep .leftRound {
+    border-radius: 50% 0 0 50%;
+}
+::ng-deep .rightRound {
+    border-radius: 0 50% 50% 0;
+}
+::ng-deep .redBorder {
+    outline: 1px dotted red;
+}
+
+.timerow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

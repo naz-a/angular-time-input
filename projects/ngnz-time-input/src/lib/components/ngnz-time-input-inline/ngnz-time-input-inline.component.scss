@@ -1,0 +1,90 @@
+.ngnz-time-group {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+
+    .ngnz-splitter,
+    .ngnz-hours-block,
+    .ngnz-minutes-block,
+    .ngnz-seconds-block {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-direction: row !important;
+        .ngnz-hours,
+        .ngnz-minutes,
+        .ngnz-seconds {
+            color: inherit;
+            border: none;
+            outline: none;
+            font: inherit;
+            text-align: center !important;
+            vertical-align: middle !important;
+            padding: 0 !important;
+        }
+        .ngnz-button {
+            @extend .ngnz-square-1em;
+            cursor: pointer;
+            padding: 0 !important;
+            font-weight: bold;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            line-height: inherit !important;
+            font-size: inherit !important;
+            box-sizing: border-box;
+            position: relative;
+            top: 0;
+
+            ::ng-deep .mat-button-wrapper {
+                line-height: inherit !important;
+                padding: 0 !important;
+            }
+
+            ::ng-deep .mat-button-base {
+                min-width: inherit !important;
+            }
+        }
+    }
+    .ngnz-splitter {
+        opacity: 0;
+        min-width: 1em !important;
+        transition: opacity 200ms !important;
+    }
+}
+
+:host.floating .ngnz-splitter {
+    opacity: 1;
+}
+
+.ngnz-lr-margin-1em {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.ngnz-width-1em {
+    width: 1em !important;
+    min-width: 1em !important;
+}
+.ngnz-height-1em {
+    height: 1em !important;
+    min-height: 1em !important;
+}
+.ngnz-square-1em {
+    @extend .ngnz-width-1em;
+    @extend .ngnz-height-1em;
+}
+.ngnz-width-2em {
+    width: 2em !important;
+    min-width: 2em !important;
+}
+
+.ngnz-height-2em {
+    height: 2em !important;
+    min-height: 2em !important;
+}
+
+.material-icons {
+    font-size: inherit !important;
+}
