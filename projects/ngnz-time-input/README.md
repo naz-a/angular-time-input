@@ -1,24 +1,28 @@
 # NgnzTimeInput
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+This is a simple Angular 8 component is to be used to change time as MomentJs.Moment data type.
+It is not influence to date part. It allows to change seconds.
+You can use it as field in angular reactive form or separately by [value] attribute and (timeChange) event.
+It depends on MomentJs, Angular MaterialDesign libraries.
 
-## Code scaffolding
+## Input parameters
 
-Run `ng generate component component-name --project ngnz-time-input` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngnz-time-input`.
-> Note: Don't forget to add `--project ngnz-time-input` or else it will be added to the default project in your `angular.json` file. 
+-   _**color**: string_ - from Material theme: primary, accent, warn;
 
-## Build
+-   _**buttonMatType**: string_ - type of control buttons in Material Design: mat-button, mat-raised-button etc.
 
-Run `ng build ngnz-time-input` to build the project. The build artifacts will be stored in the `dist/` directory.
+-   _**inputClasses**: string | string[] | {[key:string]:boolean}_ - additional css classes for input fields of hours, minutes and seconds
 
-## Publishing
+-   _**inputClasses**: string | string[] | {[key:string]:boolean}_ - additional css classes for control buttons
 
-After building your library with `ng build ngnz-time-input`, go to the dist folder `cd dist/ngnz-time-input` and run `npm publish`.
+-   _**buttonDecreaseClasses**: string | string[] | {[key:string]:boolean}_ - additional css classes for decrease button on the left side of the input fieled
 
-## Running unit tests
-
-Run `ng test ngnz-time-input` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+-   _**buttonIncreaseClasses**: string | string[] | {[key:string]:boolean}_ - additional css classes for increase button on the right side of the input fieled
+-   _**inputMode**: TimeInputMode_ - enum defining of time change mode: 0-Limit, 1-Circular, 2-CircularForwarding
+-   _**value**: Moment_ - value
+-   _**splitter**: string_ - one character to separate hours from minutes and minutes from seconds; default is ':'
+-   _**noButtons**: boolean_ - do not show control buttons; normally buttons are shown on focus
+-   _**showButtons**: boolean_ - always show control buttons; normally buttons are shown on focus
+-   _**noSeconds**: boolean_ - do not show seconds block if it is not necessary
+-   _**decreaseBtnIconName**: string_ - mat icon name for descrease controll button; 'remove' by default
+-   _**increaseBtnIconName**: string_ - mat icon name for increase control button; 'add' by default

@@ -1,6 +1,15 @@
 {
     "name": "ngnz-time-input",
     "version": "0.0.1",
+    "description": "Material design time input",
+    "keywords": [
+        "time",
+        "moment",
+        "MomentJs",
+        "input"
+    ],
+    "homepage": "https://github.com/naz-a/angular-time-input",
+    "license": "MIT",
     "peerDependencies": {
         "@angular/platform-browser": "^8.2.10",
         "@angular/platform-browser-dynamic": "^8.2.10",
