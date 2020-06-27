@@ -14,11 +14,11 @@
         "@angular/platform-browser": "^8.2.10",
         "@angular/platform-browser-dynamic": "^8.2.10",
         "@angular/animations": "^8.2.10",
-        "@angular/cdk": "^8.2.10",
+        "@angular/cdk": "^8.2.3",
         "@angular/common": "^8.2.10",
         "@angular/core": "^8.2.10",
         "@angular/forms": "^8.2.10",
-        "@angular/material": "^8.2.10",
+        "@angular/material": "^8.2.3",
         "moment": "^2.24.0",
         "rxjs": "^6.5.4"
     }
