@@ -1,56 +1,89 @@
-<mat-form-field appearance="standard">
-    <ngnz-time-input-inline
-        [formControl]="testTimeInputControl1"
-        [noButtons]="true"
-        [inputMode]="inputModeLimit"
-        (timeChange)="onTimeChange($event)"
-    >
-    </ngnz-time-input-inline>
-</mat-form-field>
-| {{ actTime.format("YYYY-MM-DD HH:mm:ss") }} |
-{{ testTimeInputControl1.value.format("YYYY-MM-DD HH:mm:ss") }}
-<br />
-<mat-form-field appearance="standard" style="width: 250px;">
-    <ngnz-time-input-inline
-        color="primary"
-        mat-raised-button
-        [value]="actTime"
-        [noSeconds]="true"
-        [showButtons]="true"
-        [increaseBtnIconName]="'arrow_drop_up'"
-        [decreaseBtnIconName]="'arrow_drop_down'"
-        [inputClasses]="sClass"
-        [inputMode]="inputModeCircular"
-        (timeChange)="onTimeChange($event)"
-    >
-    </ngnz-time-input-inline>
-</mat-form-field>
-| {{ actTime.format("YYYY-MM-DD HH:mm:ss") }} |
-<br />
-<span style="width: 10px;">ident</span>
-<mat-form-field appearance="standard" style="width: 250px;">
-    <ngnz-time-input-inline
-        [buttonMatType]="'mat-fab'"
-        [formControl]="testTimeInputControl2"
-        [increaseBtnIconName]="'keyboard_arrow_up'"
-        [decreaseBtnIconName]="'keyboard_arrow_down'"
-        [buttonDecreaseClasses]="'leftRound'"
-        [buttonIncreaseClasses]="'rightRound'"
-        [buttonsClasses]="'redBorder'"
-        [inputClasses]="sClass"
-        (timeChange)="onTimeChange($event)"
-    >
-    </ngnz-time-input-inline>
-</mat-form-field>
-| {{ actTime.format("YYYY-MM-DD HH:mm:ss") }} |
-{{ testTimeInputControl2.value.format("YYYY-MM-DD HH:mm:ss") }}
-<br />
-<button mat-stroked-button color="primary" (click)="onSetControl1Now()">
-    set Input 1 to now
-</button>
-<button mat-stroked-button color="warn" (click)="onSetActTimeNow()">
-    set Input 2 to now
-</button>
-<button mat-stroked-button color="disable" (click)="onSetControl2Now()">
-    set Input 2 to now
-</button>
+<div class="example">
+    <h5>use FormControl, no buttons, Limit mode:</h5>
+    <mat-form-field appearance="standard">
+        <ngnz-time-input-inline
+            [formControl]="testTimeInputControl1"
+            [noButtons]="true"
+            [inputMode]="inputModeLimit"
+            (timeChange)="onTimeChange($event)"
+        >
+        </ngnz-time-input-inline>
+    </mat-form-field>
+    actTime: {{ actTime.format("YYYY-MM-DD HH:mm:ss") }} | Control1:
+    {{ testTimeInputControl1.value.format("YYYY-MM-DD HH:mm:ss") }}
+</div>
+<div class="example">
+    <h5>
+        no FormControl, value attrbute, no seconds, always show buttons, custom
+        button icons, extra class for inputs, circular mode, set color and style
+        for buttons
+    </h5>
+    <mat-form-field appearance="standard" style="width: 250px;">
+        <ngnz-time-input-inline
+            color="primary"
+            mat-raised-button
+            [value]="actTime"
+            [noSeconds]="true"
+            [showButtons]="true"
+            [increaseBtnIconName]="'arrow_drop_up'"
+            [decreaseBtnIconName]="'arrow_drop_down'"
+            [inputMode]="inputModeCircular"
+            (timeChange)="onTimeChange($event)"
+        >
+        </ngnz-time-input-inline>
+    </mat-form-field>
+    actTime: {{ actTime.format("YYYY-MM-DD HH:mm:ss") }}
+</div>
+<div class="example">
+    <h5>
+        use FormControl,custom button icons, extra class for buttons, dynamic
+        extra class for input, CircularForwarding mode
+    </h5>
+    <mat-form-field appearance="standard" style="width: 250px;">
+        <ngnz-time-input-inline
+            [formControl]="testTimeInputControl2"
+            [increaseBtnIconName]="'keyboard_arrow_up'"
+            [decreaseBtnIconName]="'keyboard_arrow_down'"
+            [buttonDecreaseClasses]="'leftRound'"
+            [buttonIncreaseClasses]="'rightRound'"
+            [buttonsClasses]="'shadow'"
+            [inputClasses]="sClass"
+            (timeChange)="onTimeChange($event)"
+        >
+        </ngnz-time-input-inline>
+    </mat-form-field>
+    actTime: {{ actTime.format("YYYY-MM-DD HH:mm:ss") }} | Control2:
+    {{ testTimeInputControl2.value.format("YYYY-MM-DD HH:mm:ss") }}
+</div>
+<div class="example">
+    <h5>
+        use FormControl with null value, custom button icons, extra class for
+        buttons, dynamic extra class for input, CircularForwarding mode
+    </h5>
+    <mat-form-field appearance="standard" style="width: 250px;">
+        <ngnz-time-input-inline
+            [buttonMatType]="'mat-fab'"
+            [formControl]="testTimeInputControl3"
+            [increaseBtnIconName]="'keyboard_arrow_up'"
+            [decreaseBtnIconName]="'keyboard_arrow_down'"
+            [inputClasses]="sClass"
+        >
+        </ngnz-time-input-inline>
+    </mat-form-field>
+    Control3:
+    {{
+        !!testTimeInputControl3.value &&
+            testTimeInputControl3.value.format("YYYY-MM-DD HH:mm:ss")
+    }}
+</div>
+<div class="example">
+    <button mat-stroked-button color="primary" (click)="onSetControl1Now()">
+        set Input 1 to now
+    </button>
+    <button mat-stroked-button color="warn" (click)="onSetActTimeNow()">
+        set ActTime to now
+    </button>
+    <button mat-stroked-button color="disable" (click)="onSetControl2Now()">
+        set Input 2 to now
+    </button>
+</div>

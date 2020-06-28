@@ -22,6 +22,7 @@ export class AppComponent {
 
     public testTimeInputControl1 = new FormControl(this._actTime);
     public testTimeInputControl2 = new FormControl(this._actTime);
+    public testTimeInputControl3 = new FormControl(null);
 
     public get actTime() {
         return this._actTime;

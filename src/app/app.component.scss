@@ -1,21 +1,26 @@
-button {
-    color: olive;
+.example {
+    margin: 2em;
+    padding: 1em;
+    border: 1px solid royalblue;
+    border-radius: 0.5em;
+    text-align: center;
 }
 
-::ng-deep .assClass {
-    background: goldenrod;
+::ng-deep .sClass {
+    color: red !important;
 }
 
 ::ng-deep .leftRound {
-    border-radius: 50% 0 0 50%;
+    border-radius: 50% 0 0 50% !important;
 }
 ::ng-deep .rightRound {
-    border-radius: 0 50% 50% 0;
+    border-radius: 0 50% 50% 0 !important;
 }
-::ng-deep .redBorder {
-    outline: 1px dotted red;
+::ng-deep .shadow {
+    background-color: whitesmoke;
+    border-width: 1px;
+    box-shadow: 0 0 5px black;
 }
-
 .timerow {
     display: flex;
     justify-content: center;
