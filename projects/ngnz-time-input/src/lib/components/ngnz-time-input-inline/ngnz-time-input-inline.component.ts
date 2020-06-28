@@ -56,7 +56,6 @@ export class NgnzTimeInputInlineComponent
     MatFormFieldControl<moment.Moment>,
     OnInit,
     OnDestroy,
-    // OnChanges,
     DoCheck {
     static nextId = 0;
     readonly BUTTON_HOST_ATTRIBUTES = [
@@ -158,10 +157,10 @@ export class NgnzTimeInputInlineComponent
         return out;
     }
     set value(value: moment.Moment) {
-        this._inputValue = value;
-        const hours = +value.hours();
-        const minutes = +value.minutes();
-        const seconds = +value.seconds();
+        this._inputValue = (!!value && moment.isMoment(value) && value) || moment();
+        const hours = +this._inputValue.hours();
+        const minutes = +this._inputValue.minutes();
+        const seconds = +this._inputValue.seconds();
         this._timeValue.setHours(hours).setMinutes(minutes).setSeconds(seconds);
         this.detectChangies();
     }
@@ -304,7 +303,6 @@ export class NgnzTimeInputInlineComponent
         this._timeValue.inputMode = this.inputMode;
         this._cssClassChange();
     }
-
     ngDoCheck() {
         this._cssClassChange();
     }
