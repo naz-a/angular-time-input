@@ -8,19 +8,19 @@ It depends on MomentJs, Angular MaterialDesign libraries.
 ## Look and Feel
 
 **Example 1.** Input field with no buttons to change value. Use mouse wheel.\
-![Pic.1.](readme_image_1.png)
+![Pic.1.](https://raw.githubusercontent.com/naz-a/angular-time-input/master/projects/ngnz-time-input/readme_image_1.png)
 
 **Example 2.** Input field with always shown buttons to change value. Defined Material Design style "mat-raised-button" and color "primary" Also possible to use mouse wheel. Part of seconds is hidden.\
-![Pic.1.](readme_image_2.png)
+![Pic.1.](https://raw.githubusercontent.com/naz-a/angular-time-input/master/projects/ngnz-time-input/readme_image_2.png)
 
 **Example 3.** Input field with buttons shows on focus. Not focused. Use buttons or mouse wheel to change value.\
-![Pic.1.](readme_image_3.png)
+![Pic.1.](https://raw.githubusercontent.com/naz-a/angular-time-input/master/projects/ngnz-time-input/readme_image_3.png)
 
 **Example 4.** Focused input field with custom buttons defined with CSS class shows on focus.\
-![Pic.1.](readme_image_4.png)
+![Pic.1.](https://raw.githubusercontent.com/naz-a/angular-time-input/master/projects/ngnz-time-input/readme_image_4.png)
 
 **Example 5.** Focused input field with defined Material Design "mat-fab" style buttons\
-![Pic.1.](readme_image_5.png)
+![Pic.1.](https://raw.githubusercontent.com/naz-a/angular-time-input/master/projects/ngnz-time-input/readme_image_5.png)
 
 ## Usage
 
